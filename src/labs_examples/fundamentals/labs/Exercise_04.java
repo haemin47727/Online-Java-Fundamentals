@@ -16,6 +16,32 @@ public class Exercise_04 {
         System.out.println("int i is: " + i);
 
         // write your code below
+        int age = 43;
+        String name = "Ryan";
+
+        System.out.println(name + " is " + age + " years old.");
+
+        // byte,short,int,long,float,double,boolean,char
+        // declare : byte b, initialize by having =
+        byte a = 2;
+        System.out.println(a);
+        short b = 1500;
+        System.out.println("Short is " + b);
+        long temperature = 6500;
+        System.out.println("The temperature is " + temperature + " Fahrenheit.");
+        float pi = 3.14F;
+        System.out.println("Apple " + pi + " is yummy");
+        double c = 590.5;
+        System.out.println("Dobule is " + c );
+        boolean isDaylight = false;
+        System.out.println(isDaylight);
+
+        if (!isDaylight) {
+            System.out.println("Turn on lights!");
+        }
+        char beef = 'F';
+        System.out.println("The grade is " + beef);
+
 
     }
 
