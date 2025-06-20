@@ -33,16 +33,17 @@ public class Exercise_04 {
         System.out.println("Apple " + pi + " is yummy");
         double c = 590.5;
         System.out.println("Dobule is " + c );
-        boolean isDaylight = false;
-        System.out.println(isDaylight);
 
-        if (!isDaylight) {
-            System.out.println("Turn on lights!");
-        }
+
         char beef = 'F';
         System.out.println("The grade is " + beef);
-
-
+        boolean Nightlight = false;
+        System.out.println(Nightlight);
+        boolean isDaylight = false;
+        System.out.println(isDaylight);
+        if (!Nightlight) {
+            System.out.println("Turn off the lights!");
+        }
     }
 
 }
