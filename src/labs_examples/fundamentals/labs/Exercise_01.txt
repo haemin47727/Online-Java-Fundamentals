@@ -1,3 +1,4 @@
+
 Fundamentals Exercise 1: CLI
      Perform the following tasks using the CLI and copy and paste the commands and results below
 
@@ -22,4 +23,97 @@ Example Output:
     1. cd ~/Documents/CodingNomads/
     2. mkdir Terminal_testing
     3. //...
+
+/*
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ Touch Terminal_testing
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ cd Terminal_testing
+bash: cd: Terminal_testing: Not a directory
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ rm Terminal_testing
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ pwd
+/c/Users/haemi/CodingNomads
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ mkdir Terminal_testing
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ cd Terminal_testing/
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ ls -al
+total 4
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:03 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:02 ..
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:03 test1
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:03 test2
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:03 test3
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ rm test1 test2 test3
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ ls -al
+total 4
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:03 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:02 ..
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ touch test1.txt test2.txt test3.txt
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ ls -al
+total 4
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:04 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:02 ..
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test1.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test2.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test3.txt
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ mkdir New_Folder
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ ls -al
+total 8
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:04 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:02 ..
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:04 New_Folder
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test1.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test2.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test3.txt
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ cp test1.txt New_Folder
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ mv test2.txt New_Folder
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ ls -al
+total 8
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:05 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:02 ..
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:05 New_Folder
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test1.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test3.txt
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ cd New_Folder
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing/New_Folder
+$ ls -al
+total 4
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:05 .
+drwxr-xr-x 1 haemi 197609 0 Jun 21 22:05 ..
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:05 test1.txt
+-rw-r--r-- 1 haemi 197609 0 Jun 21 22:04 test2.txt
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing/New_Folder
+$ vim test1.txt
+*/
+//no clue how to use grep. waiting for answer from mentor.
+
 
