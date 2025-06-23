@@ -15,8 +15,8 @@ public class Exercise_05 {
         String str = "hello!";
         String str2 = "hello";
         // please declare an int variable below, and set it to the value of the length of "str"
-        int strLength = str.length();
-        System.out.println("The length of the string is " + strLength);
+        int strLength = "hello!".length();
+        System.out.println("The length of the string1 is " + strLength);
 
         // please initialize a boolean variable and test whether str is equal to str2
         boolean equalStrings = str.equals(str2);
@@ -26,7 +26,13 @@ public class Exercise_05 {
         System.out.println(str3);
         // please demonstrate the use of any other method that is available to us in the String class
         // for example, replace(), substring(), contains(), indexOf() etc
-
+        int search = "hello!" .indexOf("h");
+        System.out.println("How many 'h' are there? " + search);
+        String subStr = str2.substring(2,4);
+                System.out.println("The substring is " + subStr);
+        String letter = str2.charAt(2);
+        System.out.println("The character at 2nd index is " + letter);
+        System.out.println(str2.toUpperCase());
     }
 
 
