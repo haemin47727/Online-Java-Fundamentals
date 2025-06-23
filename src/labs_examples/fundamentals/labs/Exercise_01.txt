@@ -113,7 +113,13 @@ drwxr-xr-x 1 haemi 197609 0 Jun 21 22:05 ..
 
 haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing/New_Folder
 $ vim test1.txt
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads
+$ cd Terminal_testing
+
+haemi@DESKTOP-3MVH9P3 MINGW64 ~/CodingNomads/Terminal_testing
+$ grep "Dup" test1.txt
 */
-//no clue how to use grep. waiting for answer from mentor.
+
+//grep didnt yield anything
 
 
