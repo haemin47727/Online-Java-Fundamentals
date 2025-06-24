@@ -33,8 +33,8 @@ public class Exercise_05 {
         String letter = String.valueOf(str2.charAt(2));
         System.out.println("The letter at 2nd is " + letter);
         System.out.println(str2.toUpperCase());
-        String str4 = "hi";
-//        String replace = str2.replace(str4);
+        String replace = str2.replace("he", "hi");
+        System.out.println(replacegit a);
 
         
     }
