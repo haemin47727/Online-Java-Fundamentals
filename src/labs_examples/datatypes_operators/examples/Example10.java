@@ -15,15 +15,21 @@ count keeps getting reset to 0
 Update- does not compile when i is reinitialized
 */
 class NestVar {
-    public static void main(String args[]) {
-        int count;
+    public static void main(String[] args) {
+        int row = 5;
+        int col = 5;
 
-        for(count = 0; count < 10; count = count+1) {
-            System.out.println("This is count: " + count);
 
-            //int count; // illegal!!!
-            for(count = 0; count < 2; count++)
-                System.out.println("This program is in error!");
+        for(int i = 1; i < row; i = i+1) {
+            System.out.println("This will print once per i loop");
+
+            for(int j = 1; j < col; j++) {
+                //System.out.print("This will print once per j loop");
+                System.out.print("[" + i + "," + j + "]");
+                // System.out.println();
+            }
+
+             System.out.println("demo");
         }
     }
 }

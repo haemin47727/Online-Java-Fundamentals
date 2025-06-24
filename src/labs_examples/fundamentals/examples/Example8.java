@@ -21,10 +21,20 @@ class GalToLitTable {
             counter++;
             System.out.println("The counter is " + counter);
             // every 10th line, print a blank line
+
+            // counter is not 10, so gallons ++ happens here
+
+            // counter == 10
+
             if (counter == 10) {
+
                 System.out.println();
                 counter = 0; // reset the line counter
             }
+
+
+        // On if the counter is 10 other code is completed, now gallons is ++
+
         }
     }
 }

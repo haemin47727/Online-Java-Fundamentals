@@ -24,6 +24,7 @@ public class Exercise_07 {
         int days = scanner.nextInt();
 
         // write completed code here
-
+        int seconds = 86400 * days;
+        System.out.println("There are " + seconds + " seconds in " + days + " days.");
     }
 }
