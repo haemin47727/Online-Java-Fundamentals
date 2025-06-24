@@ -27,12 +27,13 @@ public class Exercise_05 {
         // please demonstrate the use of any other method that is available to us in the String class
         // for example, replace(), substring(), contains(), indexOf() etc
         int search = "hello!" .indexOf("h");
-        System.out.println("How many 'h' are there? " + search);
+        System.out.println("what position is 'h' at?  " + search);
         String subStr = str2.substring(2,4);
                 System.out.println("The substring is " + subStr);
-        String letter = str2.charAt(2);
-        System.out.println("The character at 2nd index is " + letter);
+        String letter = String.valueOf(str2.charAt(2));
+        System.out.println("The letter at 2nd is " + letter);
         System.out.println(str2.toUpperCase());
+        
     }
 
 

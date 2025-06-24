@@ -8,19 +8,20 @@ package labs_examples.fundamentals.examples;
    Call this program "GalToLitTable.java".
 */
 class GalToLitTable {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         double gallons, liters;
         int counter;
 
         counter = 0;
-        for(gallons = 1; gallons <= 100; gallons++) {
+        for (gallons = 1; gallons <= 100; gallons++) {
             liters = gallons * 3.7854; // convert to liters
             System.out.println(gallons + " gallons is " +
                     liters + " liters.");
 
             counter++;
+            System.out.println("The counter is " + counter);
             // every 10th line, print a blank line
-            if(counter == 10) {
+            if (counter == 10) {
                 System.out.println();
                 counter = 0; // reset the line counter
             }
