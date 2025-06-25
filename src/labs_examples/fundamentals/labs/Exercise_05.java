@@ -34,7 +34,7 @@ public class Exercise_05 {
         System.out.println("The letter at 2nd is " + letter);
         System.out.println(str2.toUpperCase());
         String replace = str2.replace("he", "hi");
-        System.out.println(replacegit a);
+        System.out.println(replace);
 
         
     }
