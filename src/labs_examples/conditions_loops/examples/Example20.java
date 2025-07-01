@@ -8,7 +8,7 @@ class WhileDemo {
         // print the alphabet using a while loop
         ch = 'a';
         while (ch <= 'z') {
-            System.out.print(ch);
+            System.out.println(ch);
             ch++;
         }
     }

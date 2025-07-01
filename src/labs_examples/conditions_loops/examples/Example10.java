@@ -19,9 +19,7 @@ class Help {
 
         switch(choice) {
             case '1':
-                System.out.println("The if:\n");
-                System.out.println("if(condition) statement;");
-                System.out.println("else statement;");
+                System.out.println("The if:\n\nif(condition) statement;\nelse statement;");
                 break;
             case '2':
                 System.out.println("The switch:\n");

@@ -1,7 +1,7 @@
 package labs_examples.conditions_loops.examples;
 
 // Demonstrate the switch.
-class SwitchDemo {
+class ssSwitchDemo {
     public static void main(String args[]) {
         int i;
 

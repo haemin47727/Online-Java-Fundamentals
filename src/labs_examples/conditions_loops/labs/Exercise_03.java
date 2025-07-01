@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 3: Months of the year
  *
@@ -9,5 +11,25 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_03 {
-
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give me a number and I will give you the Month");
+        int numb = scanner.nextInt();
+        switch(numb){
+            case 1 :
+                System.out.println("Jan");
+                break;
+            case 2:
+                System.out.println("Feb");
+                break;
+            case 3:
+                System.out.println("Mar");
+                break;
+            case 4:
+                System.out.println("April");
+                break;
+            default:
+                System.out.println("It goes on");
+        }
+    }
 }
