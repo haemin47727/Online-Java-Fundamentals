@@ -20,15 +20,20 @@ import java.util.Scanner;
 public class Exercise_05 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-
+        String numbz= "123";
+        int c = Integer.parseInt(numbz);
         System.out.println("Gimme two numbs");
-        int numb = scanner.nextInt();
-        int numb_2 = scanner.nextInt();
+//        int numb = scanner.nextInt();
+//        int numb_2 = scanner.nextInt();
+        String numbers = scanner.nextLine();
+        String[] array = numbers.split(" ");
+        int numb = Integer.parseInt(array[0]); //.parse
+        int numb_2 = Integer.parseInt(array[1]);
         int sum = 0;
         int count = 0;
 
-        for(numb=numb; numb <= numb_2; numb++){
-            sum = sum + numb;
+        for(;numb <= numb_2; numb++){
+            sum += numb;
             System.out.println("The sum is " + sum);
             count++;
         }

@@ -20,31 +20,49 @@ public class Exercise_02 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give me a number from 1 to 7:");
         int number = scanner.nextInt();
-        if (number < 8 && number >0 ) {
-            if (number < 7 && number >0) {
-                if (number < 6 && number >0) {
-                    if (number < 5 && number >0) {
-                        if (number < 4 && number >0) {
-                            if (number < 3 && number >0) {
-                                if (number < 2 && number >0) {
+//        if (number < 8 && number >0 ) {
+//            if (number < 7 && number >0) {
+//                if (number < 6 && number >0) {
+//                    if (number < 5 && number >0) {
+//                        if (number < 4 && number >0) {
+//                            if (number < 3 && number >0) {
+//                                if (number < 2 && number >0) {
+//
+//                                        System.out.println("The day is Saturday"); return;
+//                                    }
+//                                    System.out.println("The day is Friday"); return;
+//
+//                                }
+//                                System.out.println("The day is Thursday"); return;
+//                            }
+//                            System.out.println("The day is Wed"); return;
+//                        }
+//                        System.out.println("The day is Tues"); return;
+//                    }
+//                    System.out.println("The day is Mon"); return;
+//                }
+//                System.out.println("The day is Sun"); return;
+//            } else System.out.println("Other"); return;
+//        }
+        if(number < 1 || number > 7){
+            System.out.println("other");
 
-                                        System.out.println("The day is Saturday"); return;
-                                    }
-                                    System.out.println("The day is Friday"); return;
+        } else if (number > 1) {
+            if (number > 2) {
+                if (number > 3) {
 
-                                }
-                                System.out.println("The day is Thursday"); return;
-                            }
-                            System.out.println("The day is Wed"); return;
-                        }
-                        System.out.println("The day is Tues"); return;
-                    }
-                    System.out.println("The day is Mon"); return;
+                } else {
+                    System.out.println("Wednesday");
                 }
-                System.out.println("The day is Sun"); return;
-            } else System.out.println("Other"); return;
+            } else {
+                System.out.println("Tuesday");
+            }
+        } else {
+            System.out.println("Monday");
         }
-    }
+        System.out.println("test");
+    } //continue, break are only for loop. return exits the whole method (main method)
+}
 
     /*
     if(number == 1) {
