@@ -60,7 +60,6 @@ public class Exercise_02 {
         } else {
             System.out.println("Monday");
         }
-        System.out.println("test");
     } //continue, break are only for loop. return exits the whole method (main method)
 }
 

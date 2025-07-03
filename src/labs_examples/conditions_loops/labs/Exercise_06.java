@@ -8,5 +8,17 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_06 {
+    public static void main(String[] args) {
+    int a = 1;
+    int sum = 0;
+        while (a <= 101) {
+            if (a > 0) {
+                sum = a + sum;
+                a++;
 
+
+            }
+        }                System.out.print("sum is " + sum );
+
+    }
 }

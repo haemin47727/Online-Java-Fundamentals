@@ -21,7 +21,7 @@ public class Exercise_05 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         String numbz= "123";
-        int c = Integer.parseInt(numbz);
+        int c = Integer.parseInt(numbz);//converting string to integer. Capitalize first letter. Integer is object.
         System.out.println("Gimme two numbs");
 //        int numb = scanner.nextInt();
 //        int numb_2 = scanner.nextInt();
