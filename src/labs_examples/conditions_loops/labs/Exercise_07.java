@@ -23,9 +23,9 @@ public class Exercise_07 {
         int i = 0;
         while (i < word.length()) {
             char alphabet = word.charAt(i);
-            i++; System.out.println(alphabet);
+            i++;
             if ("aeiou".indexOf(alphabet) != -1) {
-                System.out.println("The vowel is " + alphabet +" in your word, \"" + word + "\"");
+                System.out.println("The first vowel is " + alphabet +" in your word, \"" + word + "\""); break;
             }
         }
 

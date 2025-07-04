@@ -18,6 +18,14 @@ package labs_examples.arrays.labs;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-        
+        int[][] matrix = new int[5][5];
+        int start =3;
+        for(int a = 0; a < matrix.length; a++){
+            for(int b = 0; b < matrix[a].length; b++){
+                matrix[a][b] = start;
+                start += 3;
+                System.out.print(matrix[a][b] + "\t");
+            } System.out.println();
+        }
     }
 }

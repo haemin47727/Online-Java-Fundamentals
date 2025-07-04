@@ -1,5 +1,8 @@
 package labs_examples.arrays.labs;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 /**
  *  More labs_examples.arrays
  *
@@ -16,6 +19,15 @@ public class Exercise_02 {
 
         // write code here
 
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Give me a number");
+        int input = scan.nextInt();
+        int i;
+        for(i = 0 ; i < array.length; i ++){
+            if(array[i] == input){
+                System.out.println("index is " +i );
+            }
+        }
 
     }
 }

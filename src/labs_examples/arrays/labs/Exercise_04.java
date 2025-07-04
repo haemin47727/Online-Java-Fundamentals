@@ -9,5 +9,14 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+public static void main(String[] args){
+    int[][] irregular = { { 5, 4, 3, 2 } , {3, 2, 1} , {8, 9, 4, 2} };
+    for(int[]a : irregular){
+        for(int b : a) {
+            System.out.print(b + "\t");
+        } System.out.println();
+    }
 
+
+}
 }
