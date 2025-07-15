@@ -1,6 +1,6 @@
 package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 
-public class Main {
+public class Controller {
     public static void main(String[] args){
         Medicine medicine = new Medicine("12/31/2027" , "generic");
         Medicine medicine2 = new Medicine("Stomach discomfort");
@@ -9,8 +9,11 @@ public class Main {
         System.out.println(acetaminophen1);
         Peptobismol pepto1 = new Peptobismol("Stomach issue");
         Peptobismol pepto2 = new Peptobismol(medicine2);
+        Tylenol tylenol = new Tylenol("pain" , "stomach issue");
+        acetaminophen1.setUsage("anti-inflammatory");
         System.out.println(pepto2);
         System.out.println(acetaminophen1);
+        System.out.println(tylenol);
 
     }
 }

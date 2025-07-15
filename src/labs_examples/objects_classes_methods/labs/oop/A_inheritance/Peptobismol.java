@@ -11,4 +11,6 @@ public class Peptobismol extends Medicine {
         this.setUsage(medicine.getUsage());
 
     }
+
+
 }

@@ -1,7 +1,10 @@
 
 Without running the code below, please tell me what will print. Why?
 
+/*Parent called
+Child called*/
 
+//automatic super() inside subclass and points to Parent() and print that out first.
 
 
 public class InheritanceTest

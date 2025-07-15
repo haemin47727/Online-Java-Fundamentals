@@ -4,7 +4,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
  * Run the class below and study the output. What prints and why?
  *
  * Your answer:
- *
+ * it's of type A
  */
 class A {
     int i = 10;
