@@ -4,10 +4,94 @@
     - Overriding
     - Interfaces
 
+    public class Overloading{
+
+        public void overload1(int a , int b) {
+        System.out.println("overload1");
+        }
+        public void overload1(double a){
+        System.out.println("overload 1 overloading");
+        }
+    }
+
+    public class Overriding{
+
+        public void method1(String a){
+        System.out.println("hello");
+        }
+    }
+    public class Subclass extends Overriding{
+
+        @Override
+        public void method1(String a){
+        System.out.println("bye");
+        }
+    }
+//interface
+    public interface Interface{
+        public void animal(String a);
+        }
+    public class Pet implements Interface{
+        @Override
+        public void animal(String dog){
+        System.out.println("A dog");
+        }
+    }
+
+
 2) Demonstrate the three forms of polymorphism again - but in a new set of classes. We want to lock this in.
 Challenge yourself. Build something you're proud of.
-
+//interface
+public interface Fruit{
+    public String getName();
+    public void color(String a);
+    public int getSweetness();
+    public void setSweetness(String b);
+    public void setSweetness(int c);
+}
+public class Tropical implements Fruit{
+    String name;
+    String color;
+    int level;
+    String sweet;
+    @Override
+    public String getName(){
+    return name;
+    }
+    @Override
+    public void color(String color){
+    this.color = color;
+    System.out.println("The color is " + color);
+    }
+    @Override
+    public int getSweetness(){
+    return level;
+    }
+    @Override
+    public int setSweetness(int level){
+    this.level = level;
+    return level;
+    }
+    @Override
+    public void setSweetness(String sweet){
+    this.sweet = sweet;
+    }
+}
 3) Demonstrate using an interface as an instance variable - have a constructor that takes in the interface as a
 parameter. Also have a setter that allows you to update the interface object. Through code, demonstrate that you
 understand how we can use Interfaces as dependencies (instance variables) and how useful and flexible they make our
 application.
+
+public class FruitManage{
+    Fruit fruit;
+    public FruitManage(Fruit fruit){
+    this.fruit = fruit;
+    }
+    public void setFruit(Fruit fruit){
+    this.fruit = fruit;
+    }
+    @Override
+    public String toString(){
+    return "The fruit " + fruit.getName() + " has sweetness of " + fruit.getSweetness();
+    }
+}
