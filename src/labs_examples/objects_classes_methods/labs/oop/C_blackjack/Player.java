@@ -5,7 +5,13 @@ public class Player {
     Hand hand;
     int potValue;
     public Player (){};
-    public Player ("name" , "hand" , potValue){
-
+    //public Player ("name" , "hand" , potValue){
+    //}
+    public Hand getHand() {
+        return hand;
+    }
+    public void setHand(Hand hand) {
+    this.hand = hand;
     }
 }
+
