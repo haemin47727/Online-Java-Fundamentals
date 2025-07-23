@@ -11,9 +11,9 @@ public class Deck {
 
 
     public void populateDeck() {
-        String[] ranks = {"Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Jack", "Queen", "King"};
+        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
         char[] suites = {'♠', '♦', '♥', '♣'};
-        int[] values = {11, 1, 2 , 3 , 4 , 5 , 6 , 7, 8, 9, 10, 10, 10};
+        int[] values = { 1, 2 , 3 , 4 , 5 , 6 , 7, 8, 9, 10, 10, 10, 10};
         int index = 0;
         // for (int i = 0; i < cards.length; i++) {
             for (int s = 0; s < suites.length; s++) {
