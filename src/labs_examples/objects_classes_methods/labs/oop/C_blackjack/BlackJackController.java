@@ -16,6 +16,7 @@ public class BlackJackController {
         Deck deck = new Deck();
         deck.populateDeck();
 
+
         System.out.println("What is your name?");
         computer = new Player("Computer");
         user = new Player(scanner.nextLine());
