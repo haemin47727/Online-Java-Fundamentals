@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Deck {
 
-    Card[] cards = new Card[52];
+    Card[] deckCards = new Card[52];
     ArrayList<Integer> usedCards = new ArrayList<>();
 
 
@@ -18,35 +18,41 @@ public class Deck {
         // for (int i = 0; i < cards.length; i++) {
             for (int s = 0; s < suites.length; s++) {
                 for (int r = 0; r < ranks.length; r++) {
-                    cards[index] = new Card(ranks[r], suites[s], values[r]);
-                    System.out.println(index);
+                    deckCards[index] = new Card(ranks[r], suites[s], values[r]);
                     index++;
                 }
             }
+    }
+    public void drawCard(Hand playerHand){
+        Random random = new Random ();
+        int number = 0 ;
+        do{
+            number = random.nextInt(52);
 
-
-        for (Card card : cards){
-            System.out.println(card);
+        }while (
+                usedCards.contains(number)
+        );
+        usedCards.add(number);
+        if(usedCards.size() == 52) {
+            System.out.println("You drew the last card. Shuffling new deck");
+            populateDeck();
         }
-        System.out.println(Arrays.toString(cards));
+        playerHand.cardAdd( deckCards[number] );
+
+
 
     }
     public void deal(Player player){
 
-        Random random = new Random ();
-        Hand playerHand = new Hand();
-        int number = random.nextInt(52) + 1;
 
-        do{
-            number = random.nextInt(52) + 1;
+        Hand playerHand = player.getHand();
+        playerHand.cards.clear();
+        drawCard(playerHand);
+        drawCard(playerHand);
 
-        }while (
-        usedCards.contains(number)
-        );
-        playerHand.cardAdd(cards[number]);
 
-        System.out.println("Random number will be at index of " + number + playerHand);
-        player.setHand(playerHand);
-        usedCards.add(number);
+
+        //player.setHand(playerHand);
+
     }
 }

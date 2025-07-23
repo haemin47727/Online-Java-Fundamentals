@@ -17,9 +17,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" + "\n" +
-                "suits=" + suits + "\n" +
-                ", ranks='" + ranks + '\'' +
-                '}' + "\n";
+        return suits + ranks;
     }
 }
