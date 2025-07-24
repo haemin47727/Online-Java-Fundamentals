@@ -4,6 +4,8 @@ public class Player {
     String name;
     Hand hand;
     int potValue;
+    int bett;
+
     public Player (){
         hand = new Hand();
     };
@@ -11,9 +13,7 @@ public class Player {
         this.name = name;
         hand = new Hand();
     }
-    //public Player ("name" , Hand cards , potValue){
-    //hand = cards;
-    //}
+
     public Hand getHand() {
         return hand;
     }
@@ -25,6 +25,22 @@ public class Player {
             return true;
         } else return false;
 
+    }
+    public int addPotValue(int bet){
+        bett = bet;
+        potValue += bett;
+        return potValue;
+    }
+    public int subtractPotVal(int bet){
+        bett = bet;
+        potValue -= bett;
+        return potValue;
+    }
+    public int getPotValue(){
+        return potValue;
+    }
+    public void setPotValue(int potValue){
+        this.potValue = potValue;
     }
     public String getName() {
         return name;
