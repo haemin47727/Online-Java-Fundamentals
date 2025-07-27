@@ -24,14 +24,27 @@ public class BlackJackController {
         user.setPotValue(50000);
         System.out.println("How much do you want to bet? You currently have $"
         + user.getPotValue());
+
         int bet = scanner.nextInt();
-        playBlackJack(deck , bet);
+        boolean wantsToPlayAgain = true;
+        while( wantsToPlayAgain ){
+            wantsToPlayAgain = playBlackJack(deck , bet);
+
+           }
+
+
+        System.out.println("You played " +playCount + " number of times" +
+                " with total final sum of $" + user.potValue);
 
 
 
     }
 
-    public static void playBlackJack(Deck deck, int bet) {
+    public static boolean playBlackJack(Deck deck, int bet) {
+        while(bet > user.getPotValue()){
+            System.out.println("You entered more than your pot value. Re-enter.");
+             bet = scanner.nextInt();
+        }
         int total;
         playCount++;
 
@@ -39,17 +52,18 @@ public class BlackJackController {
         deck.deal(user);
         deck.deal(computer);
         int choice = 0;
+
         do {
             System.out.println("Your hand is " + user.hand +
                     "\nand the computer's first card is "
                     + computer.hand.cards.getFirst() +
                     "\nDo you want to hit or stand? Type 1 for hit 2 for stand");
-             choice = scanner.nextInt();
+            choice = scanner.nextInt();
             if (choice == 1) {
                 deck.drawCard(user.hand);
 
                 boolean moreThan21 = user.hand.handBust();
-                if(moreThan21) {
+                if (moreThan21) {
                     break;
                 }
             }
@@ -68,40 +82,42 @@ public class BlackJackController {
         System.out.println("The computer had " + computer.hand);
 
 
-        if(user.hand.getHandValue() > 21) {
+        if (user.hand.getHandValue() > 21) {
             total = user.subtractPotVal(bet);
             System.out.println("You bust. You've bet $" + bet + " and you lose $" + user.bett +
                     " so now you have total $" + total);
-        } else if(computer.hand.getHandValue() > user.hand.getHandValue()){
-            if(computer.hand.getHandValue() < 22){
+        } else if (computer.hand.getHandValue() > user.hand.getHandValue()) {
+            if (computer.hand.getHandValue() < 22) {
                 total = user.subtractPotVal(bet);
                 System.out.println("Computer wins. You've bet $" + bet + " and you lose $" + user.bett +
-                " so now you have total $" + total);
+                        " so now you have total $" + total);
             } else {
                 total = user.addPotValue(bet);
                 System.out.println("Computer bust. You've bet $" + bet + " and you win $" + user.bett +
-                        " so now you have total $" + total); }
+                        " so now you have total $" + total);
+            }
 
-            } else if(computer.hand.getHandValue() == user.hand.getHandValue()){
+        } else if (computer.hand.getHandValue() == user.hand.getHandValue()) {
             System.out.println("Draw. No change in total");
         } else {
             total = user.addPotValue(bet);
             System.out.println("You win. You've bet $" + bet + " and you win $" + user.bett +
-                    " so now you have total $" + total);;}
+                    " so now you have total $" + total);
+            ;
+        }
 
 
         System.out.println("Do you want to play again? Type yes or no");
         scanner.nextLine();//throws away \n after nextInt
         String playAgain = scanner.nextLine();
-        if(playAgain.equalsIgnoreCase("yes")){
+        if (playAgain.equalsIgnoreCase("yes")) {
             System.out.println("How much do you want to bet? You currently have $"
                     + user.getPotValue());
             bet = scanner.nextInt();
-            playBlackJack(deck , bet);
-        }
-        System.out.println("You played " +playCount + " number of times" +
-        " with total final sum of $" + user.potValue);
-    }
+            return playBlackJack(deck , bet);
+        } else return false;
 
-}
+
+    }
+    }
 
