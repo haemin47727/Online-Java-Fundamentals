@@ -29,15 +29,9 @@ public class BlackJackController {
         boolean wantsToPlayAgain = true;
         while( wantsToPlayAgain ){
             wantsToPlayAgain = playBlackJack(deck , bet);
-
            }
-
-
         System.out.println("You played " +playCount + " number of times" +
                 " with total final sum of $" + user.potValue);
-
-
-
     }
 
     public static boolean playBlackJack(Deck deck, int bet) {

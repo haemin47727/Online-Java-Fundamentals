@@ -4,15 +4,19 @@ import java.util.Arrays;
 
 /**
  * Exception Handling Exercise 5:
- *
- *      Demonstrate how to throw an exception.
- *
+ * <p>
+ * Demonstrate how to throw an exception.
  */
 
 class Example {
 
     public static void main(String[] args) {
-
+        try {
+            throw new ArithmeticException("Arithmetic");
+        } catch (ArithmeticException e) {
+            System.out.println("exception caught");
+            e.printStackTrace();
+        }
     }
 
 }
