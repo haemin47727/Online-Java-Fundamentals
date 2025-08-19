@@ -21,5 +21,14 @@ import java.util.function.ToIntBiFunction;
 public class Exercise_02{
     public static void main (String[] args){
         UnaryOperator unaryOperator = () -> {};
+        BinaryOperator binaryOperator = () -> {};
+        Predicate predicate = () -> {};
+        DoublePredicate doublePredicate = () -> {};
+        DoubleUnaryOperator doubleUnaryOperator = () -> {};
+        IntToDoubleFunction intToDoubleFunction = () -> {};
+        Supplier supplier = () -> {};
+        ObjIntConsumer objIntConsumer = () -> {};
+        ToIntFunction toIntFunction = () -> {};
+        ToIntBiFunction toIntBiFunction = () -> {};
     }
 }
