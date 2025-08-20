@@ -1,4 +1,5 @@
 package labs_examples.lambdas.labs;
+import java.util.Comparator;
 import java.util.function.UnaryOperator;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
@@ -20,8 +21,19 @@ import java.util.function.ToIntBiFunction;
 
 public class Exercise_02{
     public static void main (String[] args){
-        UnaryOperator unaryOperator = () -> {};
-        BinaryOperator binaryOperator = () -> {};
+        UnaryOperator<Integer> unaryOperator = (Integer a) ->
+            a * 2;
+        double unary =  unaryOperator.apply(5).doubleValue();
+        System.out.println(unary);
+
+        BinaryOperator<Integer> binaryOperator = (Integer a , Integer b) -> a + b;
+        Integer binary = binaryOperator.apply(2 , 3);
+        System.out.println(binary);
+        Comparator<Integer> comparator = Integer :: compare;
+        BinaryOperator<Integer> bigger = BinaryOperator.maxBy(comparator);
+        Integer max = bigger.apply(10, 8);
+        System.out.println("bigger number is " + max);
+
         Predicate predicate = () -> {};
         DoublePredicate doublePredicate = () -> {};
         DoubleUnaryOperator doubleUnaryOperator = () -> {};
