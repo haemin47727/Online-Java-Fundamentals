@@ -127,7 +127,7 @@ public class Exercise_04 {
                         System.out.println("Passenger updated.");
                     }
 
-                    // Delete passenger
+
                     String deletePassenger = "DELETE FROM passengers WHERE passenger_id = ?";
                     try (PreparedStatement ps = conn.prepareStatement(deletePassenger)) {
                         ps.setInt(1, passengerId);
