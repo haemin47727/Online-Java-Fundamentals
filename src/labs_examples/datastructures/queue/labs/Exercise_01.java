@@ -9,3 +9,22 @@ package labs_examples.datastructures.queue.labs;
  *      1) instantiate a new Queue
  *      2) demonstrate the use of EVERY method in the Queue class you're implementing 
  */
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class Exercise_01 {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("apple");
+        queue.offer("mangosteen");
+        String removed = queue.remove();
+        System.out.println("Removed: " + removed);
+        String polled = queue.poll();
+        System.out.println("Polled: " + polled);
+        queue.add("cherry");
+        String head = queue.element();
+        System.out.println("Head (element): " + head);
+        String peeked = queue.peek();
+        System.out.println("Head (peek): " + peeked);
+    }
+}
