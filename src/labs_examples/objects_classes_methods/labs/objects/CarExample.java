@@ -89,7 +89,7 @@ class Car {
     public String toString() {
         return "Car{" +
                 "engine=" + engine.toString() +
-                ",\n stereo=" + stereo.toString() +
+                ",\n stereo=" + stereo +
                 ",\n model='" + model + '\'' +
                 ",\n color='" + color + '\'' +
                 '}';

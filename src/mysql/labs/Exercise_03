@@ -18,3 +18,87 @@ git
 *           you've got! :)
 *
 */
+SELECT * FROM flights
+WHERE DATE(departure_time) = '2025-09-19';
+
+SELECT * FROM flights
+WHERE origin = 'New York'
+  AND destination = 'Chicago'
+  AND DATE(departure_time) = '2025-09-19';
+
+SELECT p.*
+FROM passengers p
+JOIN tickets t ON p.passenger_id = t.passenger_id
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.origin = 'New York'
+  AND f.destination = 'Chicago'
+  AND DATE(f.departure_time) = CURDATE();
+
+SELECT f.*
+FROM flights f
+JOIN tickets t ON f.flight_id = t.flight_id
+JOIN passengers p ON t.passenger_id = p.passenger_id
+WHERE p.name = 'John Park'
+  AND f.flight_id = 101;
+
+SELECT p.*
+FROM passengers p
+JOIN tickets t ON p.passenger_id = t.passenger_id
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.flight_id = 101
+  AND DATE(f.departure_time) = CURDATE() - INTERVAL 1 DAY
+  AND p.name = 'Jane Kim';
+
+-- This week
+SELECT COUNT(*) FROM flights
+WHERE origin = 'New York' AND destination = 'Chicago'
+  AND YEARWEEK(departure_time, 1) = YEARWEEK(CURDATE(), 1);
+
+-- This month
+SELECT COUNT(*) FROM flights
+WHERE origin = 'New York' AND destination = 'Chicago'
+  AND MONTH(departure_time) = MONTH(CURDATE())
+  AND YEAR(departure_time) = YEAR(CURDATE());
+
+-- This year
+SELECT COUNT(*) FROM flights
+WHERE origin = 'New York' AND destination = 'Chicago'
+  AND YEAR(departure_time) = YEAR(CURDATE());
+
+-- Today
+SELECT COUNT(*) FROM tickets t
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.origin = 'New York' AND f.destination = 'Chicago'
+  AND DATE(f.departure_time) = CURDATE();
+
+-- This week
+SELECT COUNT(*) FROM tickets t
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.origin = 'New York' AND f.destination = 'Chicago'
+  AND YEARWEEK(f.departure_time, 1) = YEARWEEK(CURDATE(), 1);
+
+-- This month
+SELECT COUNT(*) FROM tickets t
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.origin = 'New York' AND f.destination = 'Chicago'
+  AND MONTH(f.departure_time) = MONTH(CURDATE())
+  AND YEAR(f.departure_time) = YEAR(CURDATE());
+
+-- This year
+SELECT COUNT(*) FROM tickets t
+JOIN flights f ON t.flight_id = f.flight_id
+WHERE f.origin = 'New York' AND f.destination = 'Chicago'
+  AND YEAR(f.departure_time) = YEAR(CURDATE());
+
+-- Insert new passenger
+  INSERT INTO passengers (passenger_id, name, email)
+  VALUES (301, 'Julia Johnson', 'julia@example.com');
+
+ -- Insert new ticket
+  INSERT INTO tickets (ticket_id, flight_id, passenger_id, seat_number, meal_pref, booking_time)
+  VALUES (401, 201, 301, '12A', 'Vegetarian', NOW());
+
+UPDATE tickets
+SET meal_pref = 'Vegan'
+WHERE passenger_id = 301
+  AND flight_id = 201;

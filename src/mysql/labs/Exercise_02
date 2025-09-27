@@ -26,3 +26,21 @@
 *   In the next exercise, we'll dig into querying this database.
 *
 */
+flights
+flight_id      INT (PK)
+origin         VARCHAR
+destination    VARCHAR
+departure_time DATETIME
+
+passengers
+passenger_id   INT (PK)
+name           VARCHAR
+email          VARCHAR
+
+tickets
+ticket_id      INT (PK)
+flight_id      INT (FK)
+passenger_id   INT (FK)
+seat_number    VARCHAR
+meal_pref      VARCHAR
+booking_time   DATETIME

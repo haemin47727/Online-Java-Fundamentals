@@ -14,34 +14,34 @@ public class Airplane {
     }
 }
 class FuelTank {
-    private double capacity;
-    private int level;
+    private double FuelCapacity;
+    private int FuelLevel;
 
 
     FuelTank(double capacity, int level) {
-        this.capacity = capacity;
-        this.level = level;
+        FuelCapacity = capacity;
+        FuelLevel = level;
     }
     FuelTank(){}
 
     public double getCapacity() {
-        return capacity;
+        return FuelCapacity;
     }
 
     public void setCapacity(double capacity) {
-        this.capacity = capacity;
+        FuelCapacity = capacity;
     }
 
     public int getLevel() {
-        return level;
+        return FuelLevel;
     }
 
     public void setLevel(int level) {
-        this.level = level;
+        FuelLevel = level;
     }
     @Override
             public String toString(){
-        return "FuelTank's capacity is " + capacity + " and level is " + level;
+        return "FuelTank's capacity is " + FuelCapacity + " and level is " + FuelLevel;
     }
 }
 
