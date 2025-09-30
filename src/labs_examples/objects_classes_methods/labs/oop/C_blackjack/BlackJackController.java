@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BlackJackController {
-        static Player user;
-        static Player computer;
-        static Scanner scanner;
-        static int playCount = 0;
+    static Player user;
+    static Player computer;
+    static Scanner scanner;
+    static int playCount = 0;
+
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         Deck deck = new Deck();
@@ -22,22 +23,20 @@ public class BlackJackController {
         computer.setPotValue(99999999);
         user = new Player(scanner.nextLine());
         user.setPotValue(50000);
-        System.out.println("How much do you want to bet? You currently have $"
-        + user.getPotValue());
+        System.out.println("How much do you want to bet? You currently have $" + user.getPotValue());
 
         int bet = scanner.nextInt();
         boolean wantsToPlayAgain = true;
-        while( wantsToPlayAgain ){
-            wantsToPlayAgain = playBlackJack(deck , bet);
-           }
-        System.out.println("You played " +playCount + " number of times" +
-                " with total final sum of $" + user.potValue);
+        while (wantsToPlayAgain) {
+            wantsToPlayAgain = playBlackJack(deck, bet);
+        }
+        System.out.println("You played " + playCount + " number of times" + " with total final sum of $" + user.potValue);
     }
 
     public static boolean playBlackJack(Deck deck, int bet) {
-        while(bet > user.getPotValue()){
+        while (bet > user.getPotValue()) {
             System.out.println("You entered more than your pot value. Re-enter.");
-             bet = scanner.nextInt();
+            bet = scanner.nextInt();
         }
         int total;
         playCount++;
@@ -48,10 +47,7 @@ public class BlackJackController {
         int choice = 0;
 
         do {
-            System.out.println("Your hand is " + user.hand +
-                    "\nand the computer's first card is "
-                    + computer.hand.cards.getFirst() +
-                    "\nDo you want to hit or stand? Type 1 for hit 2 for stand");
+            System.out.println("Your hand is " + user.hand + "\nand the computer's first card is " + computer.hand.cards.getFirst() + "\nDo you want to hit or stand? Type 1 for hit 2 for stand");
             choice = scanner.nextInt();
             if (choice == 1) {
                 deck.drawCard(user.hand);
@@ -68,7 +64,7 @@ public class BlackJackController {
         } while (choice != 2);
 
         boolean wantsCard = computer.computerAI(computer.hand.getHandValue());
-        while (wantsCard == true) {
+        while (wantsCard) {
             deck.drawCard(computer.hand);
             System.out.println("The computer hit");
             wantsCard = computer.computerAI(computer.hand.getHandValue());
@@ -78,26 +74,21 @@ public class BlackJackController {
 
         if (user.hand.getHandValue() > 21) {
             total = user.subtractPotVal(bet);
-            System.out.println("You bust. You've bet $" + bet + " and you lose $" + user.bett +
-                    " so now you have total $" + total);
+            System.out.println("You bust. You've bet $" + bet + " and you lose $" + user.bett + " so now you have total $" + total);
         } else if (computer.hand.getHandValue() > user.hand.getHandValue()) {
             if (computer.hand.getHandValue() < 22) {
                 total = user.subtractPotVal(bet);
-                System.out.println("Computer wins. You've bet $" + bet + " and you lose $" + user.bett +
-                        " so now you have total $" + total);
+                System.out.println("Computer wins. You've bet $" + bet + " and you lose $" + user.bett + " so now you have total $" + total);
             } else {
                 total = user.addPotValue(bet);
-                System.out.println("Computer bust. You've bet $" + bet + " and you win $" + user.bett +
-                        " so now you have total $" + total);
+                System.out.println("Computer bust. You've bet $" + bet + " and you win $" + user.bett + " so now you have total $" + total);
             }
 
         } else if (computer.hand.getHandValue() == user.hand.getHandValue()) {
             System.out.println("Draw. No change in total");
         } else {
             total = user.addPotValue(bet);
-            System.out.println("You win. You've bet $" + bet + " and you win $" + user.bett +
-                    " so now you have total $" + total);
-            ;
+            System.out.println("You win. You've bet $" + bet + " and you win $" + user.bett + " so now you have total $" + total);
         }
 
 
@@ -105,13 +96,12 @@ public class BlackJackController {
         scanner.nextLine();//throws away \n after nextInt
         String playAgain = scanner.nextLine();
         if (playAgain.equalsIgnoreCase("yes")) {
-            System.out.println("How much do you want to bet? You currently have $"
-                    + user.getPotValue());
+            System.out.println("How much do you want to bet? You currently have $" + user.getPotValue());
             bet = scanner.nextInt();
-            return playBlackJack(deck , bet);
+            return playBlackJack(deck, bet);
         } else return false;
 
 
     }
-    }
+}
 

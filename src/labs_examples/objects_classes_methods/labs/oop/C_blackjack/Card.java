@@ -4,13 +4,17 @@ public class Card {
     char suits;
     String ranks;
     int value;
-    public Card(){};
-    public Card(String element , char symbol, int values){
+
+    public Card() {
+    }
+
+    public Card(String element, char symbol, int values) {
         this.ranks = element;
         this.suits = symbol;
         value = values;
     }
-    public int getValue(){
+
+    public int getValue() {
         return value;
     }
 

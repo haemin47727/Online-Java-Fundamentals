@@ -5,33 +5,29 @@ import java.util.ArrayList;
 public class Hand {
     ArrayList<Card> cards;
 
-    public Hand(){
+    public Hand() {
         cards = new ArrayList<>();
     }
 
     public boolean handBust() {
-        if(getHandValue() > 21) {
-            return true;
-        }
-        else return false;
+        return getHandValue() > 21;
     }
-    public void cardAdd(Card playersCard){
+
+    public void cardAdd(Card playersCard) {
         cards.add(playersCard);
-
-
     }
-    public int getHandValue(){
+
+    public int getHandValue() {
         int handValue = 0;
-        for (Card card : cards){
+        for (Card card : cards) {
             handValue += card.getValue();
         }
         return handValue;
     }
+
     @Override
     public String toString() {
-        return cards +
-                " value: " + getHandValue();
-
+        return cards + " value: " + getHandValue();
     }
 
 }
